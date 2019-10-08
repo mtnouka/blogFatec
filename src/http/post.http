@@ -1,0 +1,46 @@
+@baseUrl = http://localhost:3000
+
+###
+// POST post
+POST {{baseUrl}}/posts
+Content-Type: application/json
+
+{
+    "author": "Sid",
+    "aboutAuthor": "teste de teste com benzetacil",
+    "title": "O Sid nunca tomou benzetacil",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate arcu quis ligula tincidunt hendrerit. Praesent dapibus diam sed purus ultrices scelerisque. Donec in sodales nunc, posuere vulputate nunc. Donec ullamcorper est dui, et pharetra quam hendrerit ac. Nulla eget ex nec nunc tristique luctus. Etiam faucibus diam ipsum, non sagittis arcu convallis vitae. Duis dignissim, nibh vitae faucibus malesuada, justo sapien accumsan mauris, vitae venenatis leo mi a orci. Vestibulum tempus lacus nunc, vitae interdum augue placerat non.",
+    "category": "teste"
+}
+
+###
+// GET posts
+GET {{baseUrl}}/posts
+
+###
+@id = 5d9bcd6b8896351a3859b3a0
+// GET posts/:id
+GET {{baseUrl}}/posts/{{id}}
+
+###
+@texto = sempre
+// GET posts/title/:texto
+GET {{baseUrl}}/posts/title/{{texto}}
+
+###
+@idDelete = 5d9bcd6b8896351a3859b3a0
+DELETE {{baseUrl}}/posts/{{idDelete}}
+
+###
+// PUT posts
+@idAlteracao = 5d9bd17fc14f192448cee715
+PUT {{baseUrl}}/posts/{{idAlteracao}}
+Content-Type: application/json 
+
+{
+    "author": "Sid",
+    "aboutAuthor": "teste de teste com benzetacil",
+    "title": "O Sid sempre tomou benzetacil",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate arcu quis ligula tincidunt hendrerit. Praesent dapibus diam sed purus ultrices scelerisque. Donec in sodales nunc, posuere vulputate nunc. Donec ullamcorper est dui, et pharetra quam hendrerit ac. Nulla eget ex nec nunc tristique luctus. Etiam faucibus diam ipsum, non sagittis arcu convallis vitae. Duis dignissim, nibh vitae faucibus malesuada, justo sapien accumsan mauris, vitae venenatis leo mi a orci. Vestibulum tempus lacus nunc, vitae interdum augue placerat non.",
+    "category": "teste"
+}
